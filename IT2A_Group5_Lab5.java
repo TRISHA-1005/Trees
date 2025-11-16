@@ -60,9 +60,7 @@ public class IT2A_Group5_Lab5 {
                         else
                             System.out.println("Error! Duplicate Value. Please Enter New Value.");
                         
-                        System.out.print("Try Again (Y/N)? ");
-                        insertI = sc.next().toUpperCase().charAt(0);
-                        sc.nextLine();
+                        insertI = askTryAgain(sc); // <-- Call the new try again method
                     } while (insertI == 'Y');
                     break;
 
@@ -79,9 +77,7 @@ public class IT2A_Group5_Lab5 {
                         else
                             System.out.println("Error! Value Not Found. Please Enter an Existing Value");
                         
-                        System.out.print("Try Again (Y/N)? ");
-                        deleteD = sc.next().toUpperCase().charAt(0);
-                        sc.nextLine();
+                        deleteD = askTryAgain(sc); // <-- Call the new try again method
                     } while (deleteD == 'Y');
                     break;
 
@@ -276,8 +272,8 @@ public class IT2A_Group5_Lab5 {
 
     // Clear Screen
     public static void clearScreen() {
-    for (int i = 0; i < 50; i++)
-        System.out.println();
+        for (int i = 0; i < 50; i++)
+            System.out.println();
     }
 
     // Pause Screen
@@ -297,5 +293,22 @@ public class IT2A_Group5_Lab5 {
                 System.out.print("Invalid Input! Enter an Integer: ");
             }
         }
+    }
+
+    // Added Method: Ask user to try again (Y/N) and validate input
+    public static char askTryAgain(Scanner sc) {
+        char input;
+        while (true) {
+            System.out.print("Try Again (Y/N)? ");
+            String line = sc.nextLine().trim().toUpperCase();
+
+            if (line.length() == 1 && (line.charAt(0) == 'Y' || line.charAt(0) == 'N')) {
+                input = line.charAt(0);
+                break;
+            } else {
+                System.out.println("Invalid input! Please enter only 'Y' or 'N'.");
+            }
+        }
+        return input;
     }
 }
