@@ -99,7 +99,9 @@ public class IT2A_Group5_Lab5 {
                         choiceT = sc.next().charAt(0);
                         sc.nextLine();
 
+                        // Traversal Choices
                         switch (choiceT) {
+                            // Choice 1: In Order
                             case '1':
                                 System.out.print("InOrder: ");
                                 tree.inorder(tree.root);
@@ -107,6 +109,7 @@ public class IT2A_Group5_Lab5 {
                                 pause(sc);
                                 break;
 
+                            // Choice 2: Pre Order
                             case '2':
                                 System.out.print("PreOrder: ");
                                 tree.preorder(tree.root);
@@ -114,6 +117,7 @@ public class IT2A_Group5_Lab5 {
                                 pause(sc);
                                 break;
 
+                            // Choice 3: Post Order
                             case '3':
                                 System.out.print("PostOrder: ");
                                 tree.postorder(tree.root);
@@ -121,6 +125,7 @@ public class IT2A_Group5_Lab5 {
                                 pause(sc);
                                 break;
 
+                            // Choice 4: Exit
                             case '4':
                                 break;
 
@@ -134,7 +139,7 @@ public class IT2A_Group5_Lab5 {
 
                 // QUIT
                 case 'Q':
-                    System.out.println("Exiting program...");
+                    System.out.println("Program terminated. Thank you!");
                     break;
 
                 default:
