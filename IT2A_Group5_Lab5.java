@@ -39,7 +39,6 @@ public class IT2A_Group5_Lab5 {
 
                 // Case 1: Show
                 case 'S':
-                    clearScreen();
                     if (tree.root == null)
                         System.out.println("The Tree is Empty!");
                     else
