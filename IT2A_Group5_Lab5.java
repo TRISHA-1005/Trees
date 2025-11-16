@@ -1,4 +1,6 @@
-/* Short Description
+/* This program is a menu-driven Java application allowing users to perform Binary Search Tree operations - 
+including insertion, deletion, traversal, and visual display — while ensuring valid input and organized, 
+efficient method implementation.
  * Group 5
  * Authors: Daclison, Trisha Jamaica U.  (Leader)
  *          Banzuela, Francine Hope G.   (Members)
@@ -76,7 +78,7 @@ public class IT2A_Group5_Lab5 {
                         else
                             System.out.println("Error! Value Not Found. Please Enter an Existing Value");
                         
-                        deleteD = askTryAgain(sc); // <-- Call the new try again method
+                        deleteD = askTryAgain(sc); 
                     } while (deleteD == 'Y');
                     break;
 
