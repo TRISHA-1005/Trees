@@ -272,7 +272,7 @@ public class IT2A_Group5_Lab5 {
 
     // Clear Screen
     public static void clearScreen() {
-        for (int i = 0; i < 50; i++)
+        for (int i = 0; i < 10; i++)
             System.out.println();
     }
 
